@@ -9,107 +9,131 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav id="topnav">
+    <a class="wordmark" href="#/">The Attention Gap</a>
+    <span class="nav-kicker" id="nav-kicker"></span>
+    <a class="nav-all" href="#/">All issues</a>
+  </nav>
+
   <main id="app">
+    <div id="home-view"></div>
 
-    <!-- Stage 0 · Hero -->
-    <header class="stage hero" id="stage-hero">
-      <p class="kicker" id="hero-kicker"></p>
-      <h1 id="hero-title"></h1>
-      <p class="tagline" id="hero-tagline"></p>
-      <div class="intro" id="hero-intro"></div>
-      <button class="btn primary" id="btn-begin" type="button">Begin — about 2 minutes</button>
-      <p class="privacy-note">Nothing you enter leaves this page.</p>
-    </header>
+    <div id="issue-view" hidden>
 
-    <!-- Stage 1 · Your read -->
-    <section class="stage" id="stage-perception" hidden aria-labelledby="h-perception">
-      <p class="stage-num">Stage 1 of 4</p>
-      <h2 id="h-perception" tabindex="-1"></h2>
-      <p class="lede" id="perception-lede"></p>
-      <div id="sliders"></div>
-      <fieldset class="engagement" id="engagement">
-        <legend id="engagement-label"></legend>
-        <div id="engagement-items"></div>
-      </fieldset>
-      <button class="btn primary" id="btn-perception" type="button">Continue →</button>
-    </section>
+      <!-- Issue hero -->
+      <header class="stage issue-hero">
+        <p class="kicker" id="issue-kicker"></p>
+        <h1 id="issue-title"></h1>
+        <div class="intro" id="issue-intro"></div>
+        <button class="btn primary" id="btn-begin" type="button">Begin — about 5 minutes</button>
+      </header>
 
-    <!-- Stage 2 · Your footprint -->
-    <section class="stage" id="stage-quiz" hidden aria-labelledby="h-quiz">
-      <p class="stage-num">Stage 2 of 4</p>
-      <h2 id="h-quiz" tabindex="-1"></h2>
-      <p class="lede" id="quiz-lede"></p>
-      <div id="quiz-questions"></div>
-      <p class="hint" id="quiz-hint">Answer all seven to continue.</p>
-      <button class="btn primary" id="btn-quiz" type="button" disabled>See your gap →</button>
-    </section>
+      <!-- Stage 1 · Your read -->
+      <section class="stage" id="stage-perception" hidden aria-labelledby="h-perception">
+        <p class="stage-num">Stage 1 · Your read</p>
+        <h2 id="h-perception" tabindex="-1"></h2>
+        <p class="lede" id="perception-lede"></p>
+        <div id="sliders"></div>
+        <fieldset class="engagement" id="engagement">
+          <legend id="engagement-label"></legend>
+          <div id="engagement-items"></div>
+        </fieldset>
+        <button class="btn primary" id="btn-perception" type="button">Continue →</button>
+      </section>
 
-    <!-- Stage 3 · The gap -->
-    <section class="stage" id="stage-gap" hidden aria-labelledby="h-gap">
-      <p class="stage-num">Stage 3 of 4</p>
-      <h2 id="h-gap" tabindex="-1"></h2>
-      <p class="lede" id="gap-lede"></p>
-      <figure class="gap-chart" id="gap-chart" aria-describedby="gap-verdict">
-        <div class="legend" id="gap-legend"></div>
-        <div id="gap-bars"></div>
-        <div class="axis" aria-hidden="true"><span>0</span><span>50</span><span>100</span></div>
-      </figure>
-      <p class="verdict" id="gap-verdict"></p>
-      <details class="fine">
-        <summary>How the scoring works · table view</summary>
-        <div id="methodology"></div>
-      </details>
-      <button class="btn primary" id="btn-gap" type="button">Now see the actual scale →</button>
-    </section>
+      <!-- Stage 2 · Your footprint -->
+      <section class="stage" id="stage-quiz" hidden aria-labelledby="h-quiz">
+        <p class="stage-num">Stage 2 · Your footprint</p>
+        <h2 id="h-quiz" tabindex="-1"></h2>
+        <p class="lede" id="quiz-lede"></p>
+        <div id="quiz-questions"></div>
+        <p class="hint" id="quiz-hint"></p>
+        <button class="btn primary" id="btn-quiz" type="button" disabled>See your gap →</button>
+      </section>
 
-    <!-- Stage 4 · The scale -->
-    <section class="stage" id="stage-scale-intro" hidden aria-labelledby="h-scale">
-      <p class="stage-num">Stage 4 of 4</p>
-      <h2 id="h-scale" tabindex="-1"></h2>
-      <p class="lede" id="scale-lede"></p>
-      <p class="field-note" id="scale-note"></p>
-      <p class="scroll-cue" aria-hidden="true">↓</p>
-    </section>
+      <!-- Stage 3 · The gap -->
+      <section class="stage" id="stage-gap" hidden aria-labelledby="h-gap">
+        <p class="stage-num">Stage 3 · The gap</p>
+        <h2 id="h-gap" tabindex="-1"></h2>
+        <p class="lede" id="gap-lede"></p>
+        <figure class="gap-chart" id="gap-chart" aria-describedby="gap-verdict">
+          <div class="legend" id="gap-legend"></div>
+          <div id="gap-bars"></div>
+          <div class="axis" aria-hidden="true"><span>0</span><span>50</span><span>100</span></div>
+        </figure>
+        <p class="verdict" id="gap-verdict"></p>
+        <details class="fine">
+          <summary>How the scoring works · table view</summary>
+          <div id="methodology"></div>
+        </details>
+        <button class="btn primary" id="btn-gap" type="button">Continue →</button>
+      </section>
 
-    <section id="dotfield" hidden>
-      <div class="df-sticky">
-        <canvas id="df-canvas" role="img" aria-label="A field of 510,000 dots, one per NCAA student-athlete. Ten dots near the end, highlighted in magenta, represent the fewer-than-ten transgender athletes the NCAA president testified to in December 2024."></canvas>
-        <div class="df-rail" aria-hidden="true"><div class="df-rail-marker" id="df-rail-marker"></div><div class="df-rail-end"></div></div>
-        <div class="df-hud">
-          <p><span class="df-num" id="df-count">0</span> <span class="df-cap" id="df-count-label">athletes so far</span></p>
-          <p><span class="df-num df-hi" id="df-trans">0</span> <span class="df-cap" id="df-trans-label">transgender athletes</span></p>
+      <!-- Optional · Trend (issues where the line genuinely rises or falls) -->
+      <section class="stage" id="stage-trend" hidden aria-labelledby="h-trend">
+        <p class="stage-num">The direction</p>
+        <h2 id="h-trend" tabindex="-1"></h2>
+        <p class="lede" id="trend-note"></p>
+        <div id="trend-body"></div>
+        <button class="btn primary" id="btn-trend" type="button">Continue →</button>
+      </section>
+
+      <!-- Optional · Calibration (guess before the reveal) -->
+      <section class="stage" id="stage-calibration" hidden aria-labelledby="h-calibration">
+        <p class="stage-num">Calibrate</p>
+        <h2 id="h-calibration" tabindex="-1"></h2>
+        <div id="calibration-body"></div>
+      </section>
+
+      <!-- Stage 4 · The scale -->
+      <section class="stage" id="stage-scale-intro" hidden aria-labelledby="h-scale">
+        <p class="stage-num">Stage 4 · The scale</p>
+        <h2 id="h-scale" tabindex="-1"></h2>
+        <p class="lede" id="scale-lede"></p>
+        <p class="field-note" id="scale-note"></p>
+        <p class="scroll-cue" aria-hidden="true">↓</p>
+      </section>
+
+      <section id="dotfield" hidden>
+        <div class="df-sticky">
+          <canvas id="df-canvas" role="img"></canvas>
+          <div class="df-duel-labels" id="df-duel-labels" hidden><span></span><span></span></div>
+          <div class="df-rail" aria-hidden="true"><div class="df-rail-marker" id="df-rail-marker"></div><div class="df-rail-end"></div></div>
+          <div class="df-hud">
+            <p><span class="df-num" id="df-count">0</span> <span class="df-cap" id="df-count-label"></span></p>
+            <p><span class="df-num df-hi" id="df-trans">0</span> <span class="df-cap" id="df-trans-label"></span></p>
+          </div>
+          <button class="btn ghost df-skip" id="df-skip" type="button"></button>
         </div>
-        <button class="btn ghost df-skip" id="df-skip" type="button"></button>
-      </div>
-      <div id="df-marks"></div>
-      <div class="visually-hidden" aria-live="polite" id="df-live"></div>
-    </section>
+        <div id="df-marks"></div>
+        <div class="visually-hidden" aria-live="polite" id="df-live"></div>
+      </section>
 
-    <!-- Stage 5 · The proportion -->
-    <section class="stage wide" id="stage-proportion" hidden aria-labelledby="h-proportion">
-      <h2 id="h-proportion" tabindex="-1"></h2>
-      <p class="lede" id="proportion-lede"></p>
-      <div class="tiles" id="tiles"></div>
-      <div class="epilogue">
-        <h3 id="epilogue-heading"></h3>
-        <div id="epilogue-points"></div>
-        <div class="chips" id="planned-chips"></div>
-        <p class="fine-note" id="planned-note"></p>
-      </div>
-      <details class="fine" id="sources">
-        <summary>Sources &amp; notes — every figure, dated</summary>
-        <ul id="sources-list"></ul>
-        <p class="fine-note" id="sources-note"></p>
-      </details>
-      <div class="end-actions">
-        <button class="btn primary" id="btn-restart" type="button">Run it again — or hand it to someone across the aisle</button>
-      </div>
-    </section>
+      <!-- Stage 5 · The proportion -->
+      <section class="stage wide" id="stage-proportion" hidden aria-labelledby="h-proportion">
+        <h2 id="h-proportion" tabindex="-1"></h2>
+        <p class="lede" id="proportion-lede"></p>
+        <div class="tiles" id="tiles"></div>
+        <div class="epilogue">
+          <h3 id="epilogue-heading"></h3>
+          <div id="epilogue-points"></div>
+        </div>
+        <details class="fine" id="sources">
+          <summary>Sources &amp; notes — every figure, dated</summary>
+          <ul id="sources-list"></ul>
+          <p class="fine-note" id="sources-note"></p>
+        </details>
+        <div class="end-actions">
+          <button class="btn primary" id="btn-home" type="button">All issues →</button>
+          <button class="btn ghost" id="btn-again" type="button">Run this one again</button>
+        </div>
+      </section>
 
-    <footer class="colophon" hidden id="colophon">
-      <p>A proportion instrument, not a verdict. All answers stay in your browser. Issue modules are config-driven — see <code>config.js</code>.</p>
-    </footer>
+      <footer class="colophon" hidden id="issue-colophon">
+        <p>A proportion instrument, not a verdict. All answers stay in your browser. Every statistic is dated and linked above.</p>
+      </footer>
 
+    </div>
   </main>
   <script type="module" src="app.js"></script>
 </body>
