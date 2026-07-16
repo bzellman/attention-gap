@@ -24,8 +24,8 @@ export default {
     questions: [
       { key: "jewish", text: "Are you Jewish, or is someone in your immediate family?",
         options: [ { label: "Yes", w: 30 }, { label: "No", w: 0 } ] },
-      { key: "targeted", text: "In the past two years, have you personally been targeted — slur, threat, harassment, vandalism — because you are (or were taken to be) Jewish?",
-        options: [ { label: "Yes", w: 30 }, { label: "No", w: 0 } ] },
+      { key: "targeted", text: "In the past two years, have you — or has an immediate family member — been targeted (slur, threat, harassment, vandalism) for being, or being taken to be, Jewish?",
+        options: [ { label: "Yes, personally", w: 30 }, { label: "An immediate family member was", w: 15 }, { label: "No", w: 0 } ] },
       { key: "institution", text: "Has a synagogue, school, or Jewish institution you attend hired armed security, or been threatened or vandalized?",
         options: [ { label: "Yes", w: 20 }, { label: "No", w: 0 }, { label: "Not sure", w: 5 } ] },
       { key: "knowVictim", text: "Do you personally know — in real life — a victim of an antisemitic assault?",

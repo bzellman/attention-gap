@@ -40,7 +40,7 @@ export const VERDICTS = {
 };
 
 export const METHODOLOGY_NOTE =
-  "Scores are computed on your device from the weights shown here. “Salience” bars come straight from your sliders (×10) and checked actions; “exposure” sums the question weights and caps at 100. The same sliders, checklist, and verdict thresholds are used for every issue.";
+  "Scores are computed on your device from the weights shown here. “Salience” bars come straight from your sliders (×10) and checked actions; “exposure” sums the question weights and caps at 100. The same sliders, checklist, and verdict thresholds are used for every issue. Where a question offers separate “I am” and “immediate family” answers, the family weight is deliberately lower — the household shares the stakes, attenuated. Identity questions (e.g., a trans, Jewish, or immigrant family member) score family at full weight, because there the household itself is inside the category.";
 
 // Closing points appended to every issue's epilogue, after its own points.
 export const EPILOGUE_TAIL = [
