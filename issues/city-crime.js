@@ -35,7 +35,7 @@ export default {
       { key: "changedBehavior", text: "Have you changed commutes, moved, or started carrying protection because of crime fear?",
         options: [ { label: "Yes", w: 10 }, { label: "No", w: 0 } ] },
       { key: "knowVictim", text: "Do you personally know — in real life — a victim of violent crime in one of these cities?",
-        options: [ { label: "Yes", w: 10 }, { label: "No", w: 0 } ] }
+        options: [ { label: "Yes", w: 15 }, { label: "No", w: 0 } ] }
     ]
   },
 

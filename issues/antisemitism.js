@@ -32,8 +32,8 @@ export default {
         options: [ { label: "Yes", w: 15 }, { label: "No", w: 0 } ] },
       { key: "concealed", text: "Have you altered visible Jewish identity in public — kippah, jewelry, Hebrew — out of safety concern?",
         options: [ { label: "Yes", w: 20 }, { label: "No", w: 0 }, { label: "Not applicable", w: 0 } ] },
-      { key: "campus", text: "Did you personally experience or witness antisemitic harassment during the 2023–25 campus protest wave?",
-        options: [ { label: "Yes", w: 15 }, { label: "No", w: 0 } ] },
+      { key: "campus", text: "Did you personally witness antisemitic harassment during the 2023–25 campus protest wave? (If you were targeted yourself, that’s already counted above.)",
+        options: [ { label: "Yes", w: 10 }, { label: "No", w: 0 } ] },
       { key: "witnessed", text: "If you’re not Jewish: have you ever witnessed an antisemitic act in person?",
         options: [ { label: "Yes", w: 5 }, { label: "No / Not applicable", w: 0 } ] }
     ]

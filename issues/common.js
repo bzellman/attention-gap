@@ -40,7 +40,7 @@ export const VERDICTS = {
 };
 
 export const METHODOLOGY_NOTE =
-  "Scores are computed on your device from the weights shown here. “Salience” bars come straight from your sliders (×10) and checked actions; “exposure” sums the question weights and caps at 100. The same sliders, checklist, and verdict thresholds are used for every issue. Where a question offers separate “I am” and “immediate family” answers, the family weight is deliberately lower — the household shares the stakes, attenuated. Identity questions (e.g., a trans, Jewish, or immigrant family member) score family at full weight, because there the household itself is inside the category.";
+  "Scores are computed on your device from the weights shown here. “Salience” bars come straight from your sliders (×10) and checked actions; “exposure” sums the question weights and caps at 100. The same sliders, checklist, and verdict thresholds are used for every issue. Where a question offers separate “I am” and “immediate family” answers, the family weight is deliberately lower — the household shares the stakes, attenuated. Identity questions (e.g., a trans, Jewish, or immigrant family member) score family at full weight, because there the household itself is inside the category. Knowing a victim scales with what happened to them (adjacency +5, non-violent event +10, violence +15, death +25). Fear-response costs — security purchases, changed routines, concealment — count at modest weights: an issue’s fear economy is part of its real footprint, even where the fear outruns the odds.";
 
 // Closing points appended to every issue's epilogue, after its own points.
 export const EPILOGUE_TAIL = [

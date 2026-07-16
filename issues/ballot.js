@@ -22,7 +22,7 @@ export default {
     heading: "Your footprint",
     lede: "Not opinions — exposure, in either direction. “Immediate family” means partner, child, parent, or sibling.",
     questions: [
-      { key: "witnessedFraud", text: "Have you personally witnessed someone cast, or attempt to cast, a ballot you knew to be fraudulent?",
+      { key: "witnessedFraud", text: "Have you personally witnessed a fraudulent ballot cast or attempted — or ever discovered a vote already cast in your name?",
         options: [ { label: "Yes", w: 30 }, { label: "No", w: 0 }, { label: "Not sure", w: 5 } ] },
       { key: "turnedAway", text: "Have you ever been turned away from voting, or had your registration rejected or purged, when you believed you were eligible?",
         options: [ { label: "Yes", w: 30 }, { label: "No", w: 0 }, { label: "Not sure", w: 5 } ] },

@@ -31,7 +31,7 @@ export default {
       { key: "districtIncident", text: "Has a shooting with any injury occurred at a school in your district?",
         options: [ { label: "Yes", w: 20 }, { label: "No", w: 0 }, { label: "Not sure", w: 5 } ] },
       { key: "knowPresent", text: "Do you personally know — in real life — anyone who was present at a school shooting?",
-        options: [ { label: "Yes", w: 25 }, { label: "No", w: 0 } ] },
+        options: [ { label: "Yes", w: 15 }, { label: "No", w: 0 } ] },
       { key: "boughtSafety", text: "Has your family spent money or changed schools because of this fear — bulletproof backpack, private school, homeschooling?",
         options: [ { label: "Yes", w: 15 }, { label: "No", w: 0 } ] },
       { key: "childAnxiety", text: "Does a child in your life show anxiety they attribute to lockdown drills or shooter fear?",
